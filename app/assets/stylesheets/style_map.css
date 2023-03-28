@@ -1,0 +1,193 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* CSSリセット */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,  figure, figcaption, footer, header, hgroup,  menu, nav, output, ruby, section, summary, time, mark, audio, video { 
+	margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; } /* HTML5 display-role reset for older browsers  */ article, aside, details, figcaption, figure,  footer, header, hgroup, menu, nav, section { display: block; } body { line-height: 1; } ol, ul { list-style: none; } blockquote, q { quotes: none; } blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; } table { border-collapse: collapse; border-spacing: 0; 
+}
+
+body {
+  font-family: "Helvetica Neue", "Hiragino Sans", "Hiragino Kaku Gothic ProN","ヒラギノ角ゴ ProN W3", Meiryo, "メイリオ", sans-serif;
+	font-size: 16px;
+	line-height: 1.5em;
+	color: #000000;
+	background-color: #ffffff;
+}
+img {
+	vertical-align: bottom;
+} 
+/* a:hover img {
+	opacity: 0.7;
+		-ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 60);
+		filter: alpha(opacity = 60);
+	transition: all 0.4s;
+} */
+/* a {
+	text-decoration: none;
+	color: #435ea9;
+} */
+/* a:hover {
+	text-decoration: none;
+	color: #0E2D96;
+	transition: 0.3s all;
+} */
+
+/******* 地図成形 *******/
+#japan-map div div.area div {
+	border: 1px #ffffff solid;
+	text-align: center;
+	font-size: 14px;
+ 	display: flex;
+		display: -webkit-flex;
+ 	align-items:flex-start; 
+ 		-webkit-align-items: center; /* 縦方向中央揃え（Safari用） */
+ 	justify-content: flex-start; /* 横方向中央揃え */
+ 		-webkit-justify-content: center; /* 横方向中央揃え（Safari用） */
+	border-radius: 6px;
+		-webkit-border-radius: 6px;
+	position: absolute;
+	box-sizing: border-box;
+	transition: 0.2s;
+}
+#japan-map div div.area div:hover {
+	/* opacity: 0.5; */
+	transition: 0.2s;
+	transform: scale(1.5, 1.5);
+	z-index:1;
+}
+
+#japan-map {
+	display: block;
+	width: 777px;
+	height: 482px;
+	background-color: none;
+	margin-left: 100px;
+	margin-right: 100px;
+	position: relative;
+}
+#japan-map p.area-title {
+	display: none;
+}
+
+/* 九州・沖縄 */
+
+p {
+	font-size:xx-large
+}
+
+#kyusyu {
+	width: 700px;
+	height: 600px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+#kyusyu div.area div {
+	background-color: #92cc40;
+	color: #000000;
+
+}
+#fukuoka {
+	width: 250px;
+	height: 250px;
+	left: 341px;
+	top: 0px;
+}
+#saga {
+	width: 150px;
+	height: 250px;
+	left: 171px;
+	top: 50px;
+}
+#nagasaki {
+	width: 150px;
+	height: 250px;
+	left: 1px;
+	top: 100px;
+}
+#oita {
+	width: 250px;
+	height: 250px;
+	left: 611px;
+	top: 100px;
+}
+#kumamoto {
+	width: 250px;
+	height: 400px;
+	left: 341px;
+	top: 271px;
+}
+#miyazaki {
+	width: 200px;
+	height: 350px;
+	left: 611px;
+	top: 371px;
+}
+#kagoshima {
+	width: 300px;
+	height: 200px;
+	left: 290px;
+	top: 690px;
+}
+
+/****************************************
+	レスポンシブ
+
+****************************************/
+@media screen and (max-width: 776px) {
+#japan-map {
+	display: flex;
+	width: 100%;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+#japan-map p.area-title {
+	display: inline-block;
+	width: 100%;
+	font-size: 15px;
+	text-align: center;
+	margin-top: 1.5em;
+	margin-bottom: 1em;
+	color: #000000;
+}
+
+#japan-map div div.area {
+	display: block;
+	position: relative;
+}
+
+#kyusyu {
+	height: calc(247px + 4.5em);
+}
+
+} /* レスポンシブ max-776px */
+
+@media screen and (max-width: 500px) {
+#japan-map {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+#japan-map div div.area {
+	font-size: 14px;
+ 	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+#japan-map div div.area a {
+	height: auto;
+	width: 25%;
+}
+#japan-map div div.area div {
+ 	display: block;
+	border-radius: 0px;
+	position: static;
+	height: auto;
+	font-size: 16px;
+	width: 100%;
+	padding: 0.5em 0.3em 0.5em 0.3em;
+}
+
+
+} /* レスポンシブ max-500px */
