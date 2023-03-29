@@ -102,3 +102,8 @@
   text-decoration: none;
   color: #333333;
 }
+
+.prefecture-select{
+  height: 5vh;
+  width: 250px;
+}

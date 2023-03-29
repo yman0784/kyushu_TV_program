@@ -1,0 +1,2 @@
+class Kagoshima < ApplicationRecord
+end

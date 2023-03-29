@@ -1,0 +1,2 @@
+class Saga < ApplicationRecord
+end
