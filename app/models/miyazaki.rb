@@ -1,0 +1,2 @@
+class Miyazaki < ApplicationRecord
+end

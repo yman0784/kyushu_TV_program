@@ -1,0 +1,2 @@
+class Ooitum < ApplicationRecord
+end

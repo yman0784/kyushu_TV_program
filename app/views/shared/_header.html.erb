@@ -1,8 +1,9 @@
 <%# CSS・・・assets/stylesheets/shared/header.css %>
 <header class='top-page-header'>
   <div class='search-bar-contents'>
-  <%= form_with(url: search_tv_programs_path, local: true, method: :get, class: "search-form") do |form| %>
-    <%= form.text_field :keyword, placeholder: "出演者から探す", class: "input-box" %>
+  <%= form_with url: tv_program_find_path, method: :get, local: :true do |f| %>
+    <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"prefecture-select"}) %>
+    <%= f.text_field :actor, placeholder: "検索する出演者を入力", class: "input-box" %>
     <button class="search-button">
     <%= image_submit_tag("search.png", class:"search-icon") %>
     </button> 
