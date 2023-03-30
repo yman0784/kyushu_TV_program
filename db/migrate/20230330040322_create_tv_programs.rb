@@ -1,6 +1,6 @@
-class CreateSagas < ActiveRecord::Migration[6.0]
+class CreateTvPrograms < ActiveRecord::Migration[6.0]
   def change
-    create_table :sagas do |t|
+    create_table :tv_programs do |t|
       t.string :title
       t.string :time
       t.text :overview

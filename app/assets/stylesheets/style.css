@@ -1,3 +1,13 @@
+h2 {
+  width: 160px;
+  padding: 8px 19px;
+  margin: 2em 0;
+  color: #2c2c2f;
+  background: #388ef0;
+  border-top: solid 5px #5989cf;
+  border-bottom: solid 5px #5989cf;
+}
+
 .account-page .account-page__inner {
   width: 980px;
   margin: 60px auto;
@@ -116,12 +126,12 @@
 /* 出演番組 find */
 .article{
   height: 100%;
-  width: 100%;
+  width: 80%;
   background: #EEEEEE;
   padding: 20px;
   margin-bottom: 10px;
   display: flex;
-  justify-content:space-between; 
+  justify-content: center;
 }
 
 .article-overview{
@@ -164,3 +174,17 @@
 }
 
 /* 出演番組 find ここまで */
+
+.show {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #ffffff;
+  margin-top: 30px;
+}
+
+.show-overview {
+  width: 80%;
+  height: 100%;
+  background-color: #c8d1de;
+}

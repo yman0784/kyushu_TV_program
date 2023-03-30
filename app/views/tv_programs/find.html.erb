@@ -1,12 +1,16 @@
+<%= render "shared/second-header"%>
+
 <h1> <%="#{@finder[:actor]}さんの出演番組"%> </h1>
 
 <%if @tvs.present? %>
   <% @tvs.each do |t|%>
     <div class="article" >
       <div class="article-overview">
-        <p class="article-title">
-          <%= t[:title] %>
-        </p>
+        <%= link_to tv_program_path(t.id) do %>
+          <p class="article-title">
+            <%= t[:title] %>
+          </p>
+        <% end %>
         <p class="article-content">
           放送時間：<%= t[:time] %>
         </p>
@@ -16,7 +20,8 @@
           出演者：<%= t[:performer] %>
         </p>
       </div>
-    </div>  
+    </div>
+
   <% end %> 
 <%else%>
   <%= "#{@finder[:actor]}さんの出演番組はありません" %>

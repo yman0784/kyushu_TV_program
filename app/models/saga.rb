@@ -35,12 +35,13 @@ class Saga < ApplicationRecord
       tv ={}
       @tv = Saga.new
       Saga.create(title: d[:title], time: d[:time], overview: d[:overview], detail: d[:detail], performer: d[:act])
-        tv[:title] = d[:title] 
-        tv[:overview] = d[:overview]
-        tv[:detail] = d[:detail]
-        tv[:time] = d[:time] 
-        tv[:act] = d[:act]
-        @tele << tv
+      @tv_program= TvProgram.create(title: d[:title], time: d[:time], overview: d[:overview], detail: d[:detail], performer: d[:act], prefecture_id: params[:prefecture_id])
+      # tv[:title] = d[:title] 
+        # tv[:overview] = d[:overview]
+        # tv[:detail] = d[:detail]
+        # tv[:time] = d[:time] 
+        # tv[:act] = d[:act]
+        @tele << @tv_program
       end   
     end 
   return @tele

@@ -33,15 +33,16 @@ class Kumamoto < ApplicationRecord
     @tele =[]
     @data.each do |d| 
       if d[:act].include?("#{params[:actor]}")
-      tv ={}
+      # tv ={}
       @tv = Kumamoto.new
-      Kumamoto.create(title: d[:title], time: d[:time], overview: d[:overview], detail: d[:detail], performer: d[:act])
-        tv[:title] = d[:title] 
-        tv[:overview] = d[:overview]
-        tv[:detail] = d[:detail]
-        tv[:time] = d[:time] 
-        tv[:act] = d[:act]
-        @tele << tv
+      @tv = Kumamoto.create(title: d[:title], time: d[:time], overview: d[:overview], detail: d[:detail], performer: d[:act], prefecture_id: params[:prefecture_id])
+      @tv_program= TvProgram.create(title: d[:title], time: d[:time], overview: d[:overview], detail: d[:detail], performer: d[:act], prefecture_id: params[:prefecture_id])
+      # tv[:title] = d[:title] 
+        # tv[:overview] = d[:overview]
+        # tv[:detail] = d[:detail]
+        # tv[:time] = d[:time] 
+        # tv[:act] = d[:act]
+        @tele << @tv_program
       end   
     end 
   return @tele

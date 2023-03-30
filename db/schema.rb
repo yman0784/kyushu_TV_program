@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_03_30_015915) do
+ActiveRecord::Schema.define(version: 2023_03_30_040322) do
 
   create_table "fukuokas", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2023_03_30_015915) do
     t.text "overview"
     t.text "detail"
     t.string "performer"
+    t.integer "prefecture_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -28,6 +29,7 @@ ActiveRecord::Schema.define(version: 2023_03_30_015915) do
     t.text "overview"
     t.text "detail"
     t.string "performer"
+    t.integer "prefecture_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -38,6 +40,7 @@ ActiveRecord::Schema.define(version: 2023_03_30_015915) do
     t.text "overview"
     t.text "detail"
     t.string "performer"
+    t.integer "prefecture_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -48,6 +51,7 @@ ActiveRecord::Schema.define(version: 2023_03_30_015915) do
     t.text "overview"
     t.text "detail"
     t.string "performer"
+    t.integer "prefecture_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -58,6 +62,7 @@ ActiveRecord::Schema.define(version: 2023_03_30_015915) do
     t.text "overview"
     t.text "detail"
     t.string "performer"
+    t.integer "prefecture_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -68,6 +73,7 @@ ActiveRecord::Schema.define(version: 2023_03_30_015915) do
     t.text "overview"
     t.text "detail"
     t.string "performer"
+    t.integer "prefecture_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -78,6 +84,7 @@ ActiveRecord::Schema.define(version: 2023_03_30_015915) do
     t.text "overview"
     t.text "detail"
     t.string "performer"
+    t.integer "prefecture_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -85,6 +92,17 @@ ActiveRecord::Schema.define(version: 2023_03_30_015915) do
   create_table "search_actors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "actor", null: false
     t.integer "prefecture_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "tv_programs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "title"
+    t.string "time"
+    t.text "overview"
+    t.text "detail"
+    t.string "performer"
+    t.integer "prefecture_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

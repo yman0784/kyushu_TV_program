@@ -6,6 +6,7 @@ class CreateFukuokas < ActiveRecord::Migration[6.0]
       t.text :overview
       t.text :detail
       t.string :performer
+      t.integer :prefecture_id
       t.timestamps
     end
   end
