@@ -28,6 +28,7 @@ class Kumamoto < ApplicationRecord
         end
         @data << data
       end
+      # sleep (0.1)
     end
     @tele =[]
     @data.each do |d| 

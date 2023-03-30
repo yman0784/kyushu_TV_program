@@ -1,6 +1,6 @@
-class CreateOoita < ActiveRecord::Migration[6.0]
+class CreateOita < ActiveRecord::Migration[6.0]
   def change
-    create_table :ooita do |t|
+    create_table :oita do |t|
       t.string :title
       t.string :time
       t.text :overview
