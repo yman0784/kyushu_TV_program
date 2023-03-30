@@ -15,12 +15,14 @@ class TvProgramsController < ApplicationController
   end
 
   def find
-    
+    @finder = params
+    if params[:prefecture_id] == "56"
+      @tvs = Kumamoto.kumamoto_scrape(params)
+    end
   end
 
   def search
-    @tv_programs = TvProgram.search(@search_actor[:actor])
-    binding.pry
+
   end
 
   private

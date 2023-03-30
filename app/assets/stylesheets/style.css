@@ -112,3 +112,55 @@
   padding: 0;
   font-size: 13px;
 }
+
+/* 出演番組 find */
+.article{
+  height: 100%;
+  width: 100%;
+  background: #EEEEEE;
+  padding: 20px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content:space-between; 
+}
+
+.article-overview{
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content:space-between;
+}
+
+.article-overview a{
+  display: block;
+  height: 85%;
+}
+
+.article-title{
+  height: 60%;
+  width: 100%;
+  padding: 5px;
+  font-size: 15px;
+  font-weight: bold;
+  border-bottom: solid 2px #040880;
+  white-space: normal;
+}
+
+.article-content{
+  height: 60%;
+  width: 100%;
+  padding: 5px;
+  overflow: hidden;
+  display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+}
+
+.article-content-detail{
+  height: 100%;
+  width: 100%;
+  word-break: break-all;
+}
+
+/* 出演番組 find ここまで */
