@@ -1,2 +1,0 @@
-class Ooitum < ApplicationRecord
-end

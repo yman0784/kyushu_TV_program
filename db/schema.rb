@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_03_29_132318) do
+ActiveRecord::Schema.define(version: 2023_03_30_015915) do
 
   create_table "fukuokas", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
@@ -62,7 +62,7 @@ ActiveRecord::Schema.define(version: 2023_03_29_132318) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "ooita", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "oita", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
     t.string "time"
     t.text "overview"

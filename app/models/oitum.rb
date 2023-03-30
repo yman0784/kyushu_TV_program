@@ -1,9 +1,10 @@
-class Kagoshima < ApplicationRecord
+class Oitum < ApplicationRecord
+
   require 'mechanize'
 
-  def self.kagoshima_scrape(params)
+  def self.oita_scrape(params)
     agent = Mechanize.new
-    page = agent.get('https://www.tvkingdom.jp/chart/58.action?head=&span=24&chartWidth=950&cellHeight=3&sticky=false&descriptive=true&buttonType=0')
+    page = agent.get('https://www.tvkingdom.jp/chart/60.action?head=&span=24&chartWidth=950&cellHeight=3&sticky=false&descriptive=true&buttonType=0')
     @elements = page.search('.td-schedule a')
     urls = []
     @elements.each do |ele| 
@@ -33,8 +34,8 @@ class Kagoshima < ApplicationRecord
     @data.each do |d| 
       if d[:act].include?("#{params[:actor]}")
       tv ={}
-      @tv = Kagoshima.new
-      Kagoshima.create(title: d[:title], time: d[:time], overview: d[:overview], detail: d[:detail], performer: d[:act])
+      @tv = Oitum.new
+      Oitum.create(title: d[:title], time: d[:time], overview: d[:overview], detail: d[:detail], performer: d[:act])
         tv[:title] = d[:title] 
         tv[:overview] = d[:overview]
         tv[:detail] = d[:detail]
@@ -46,3 +47,4 @@ class Kagoshima < ApplicationRecord
   return @tele
   end
 end
+

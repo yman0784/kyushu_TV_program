@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class OoitumTest < ActiveSupport::TestCase
+class OitumTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
