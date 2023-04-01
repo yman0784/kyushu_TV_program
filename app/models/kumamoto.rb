@@ -2,6 +2,7 @@ class Kumamoto < ApplicationRecord
 
   require 'mechanize'
 
+
   def self.kumamoto_scrape(params)
     agent = Mechanize.new
     page = agent.get('https://www.tvkingdom.jp/chart/56.action?head=&span=24&chartWidth=950&cellHeight=3&sticky=false&descriptive=true&buttonType=0')

@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2023_03_30_040322) do
     t.string "time"
     t.text "overview"
     t.text "detail"
-    t.string "performer"
+    t.text "performer"
     t.integer "prefecture_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 2023_03_30_040322) do
     t.string "time"
     t.text "overview"
     t.text "detail"
-    t.string "performer"
+    t.text "performer"
     t.integer "prefecture_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 2023_03_30_040322) do
     t.string "time"
     t.text "overview"
     t.text "detail"
-    t.string "performer"
+    t.text "performer"
     t.integer "prefecture_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(version: 2023_03_30_040322) do
     t.string "time"
     t.text "overview"
     t.text "detail"
-    t.string "performer"
+    t.text "performer"
     t.integer "prefecture_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -61,7 +61,7 @@ ActiveRecord::Schema.define(version: 2023_03_30_040322) do
     t.string "time"
     t.text "overview"
     t.text "detail"
-    t.string "performer"
+    t.text "performer"
     t.integer "prefecture_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -72,7 +72,7 @@ ActiveRecord::Schema.define(version: 2023_03_30_040322) do
     t.string "time"
     t.text "overview"
     t.text "detail"
-    t.string "performer"
+    t.text "performer"
     t.integer "prefecture_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -83,7 +83,7 @@ ActiveRecord::Schema.define(version: 2023_03_30_040322) do
     t.string "time"
     t.text "overview"
     t.text "detail"
-    t.string "performer"
+    t.text "performer"
     t.integer "prefecture_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -101,7 +101,7 @@ ActiveRecord::Schema.define(version: 2023_03_30_040322) do
     t.string "time"
     t.text "overview"
     t.text "detail"
-    t.string "performer"
+    t.text "performer"
     t.integer "prefecture_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

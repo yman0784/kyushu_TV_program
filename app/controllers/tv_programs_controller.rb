@@ -1,4 +1,5 @@
 class TvProgramsController < ApplicationController
+  before_action :deny_nil, only: [:find]
 
   def index
   
@@ -80,6 +81,15 @@ class TvProgramsController < ApplicationController
   end
 
   private
+
+  def deny_nil
+    if params[:actor] == nil
+      redirect_to "/"
+    end
+    unless params[:actor] =~ (/\A[(?=.*?[a-z])(?=.*?[\d])(?=.*?[ぁ-んァ-ヶ一-龥々ー])]+\z/i)
+      redirect_to "/"
+    end
+  end
 
   def search_actor_params
     params.require(:search_actor).permit(:actor, :prefecture_id)

@@ -2,6 +2,7 @@ class Miyazaki < ApplicationRecord
 
   require 'mechanize'
 
+
   def self.miyazaki_scrape(params)
     agent = Mechanize.new
     page = agent.get('https://www.tvkingdom.jp/chart/59.action?head=&span=24&chartWidth=950&cellHeight=3&sticky=false&descriptive=true&buttonType=0')

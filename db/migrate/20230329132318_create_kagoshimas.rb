@@ -5,7 +5,7 @@ class CreateKagoshimas < ActiveRecord::Migration[6.0]
       t.string :time
       t.text :overview
       t.text :detail
-      t.string :performer
+      t.text :performer
       t.integer :prefecture_id
       t.timestamps
     end
