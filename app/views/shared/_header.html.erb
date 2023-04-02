@@ -3,6 +3,7 @@
   <div class='search-bar-contents'>
   <%= form_with url: tv_program_find_path, method: :get, local: :true, class: :search do |f| %>
     <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"prefecture-select"}) %>
+    <%= f.collection_select(:set_time_id, SetTime.all, :id, :name, {}, {class:"prefecture-select"}) %>
     <%= f.text_field :actor, placeholder: "検索する出演者を入力", class: "input-box" %>
     <button class="search-button">
     <%= image_submit_tag("search.png", class:"search-icon") %>

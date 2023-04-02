@@ -1,7 +1,9 @@
-<% @tv_programs.each do |t| %>
+<%= render "shared/second-header"%>
+
+<% @prefecture_programs.each do |t| %>
   <div class="article" >
     <div class="article-overview">
-      <%= link_to tv_program_top_show_path(t.id, prefecture_id: @prefecture_id) do %>
+      <%= link_to tv_program_top_show_path(t.id, t.prefecture_id) do %>
         <p class="article-title">
           <%= t[:title] %>
         </p>
