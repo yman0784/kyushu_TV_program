@@ -1,0 +1,5 @@
+class PrefectureProgram < ApplicationRecord
+  
+
+
+end
