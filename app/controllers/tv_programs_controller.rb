@@ -13,10 +13,6 @@ class TvProgramsController < ApplicationController
     @prefecture_programs = PrefectureProgram.where(prefecture_id: params[:prefecture_id])
   end
 
-  def top_show
-    @tv_programs = PrefectureProgram.find(params[:format])
-  end
-
   def find
     TvProgram.scrape(params[:prefecture_id], params[:set_time_id], params[:actor])
     @tvs = TvProgram.keep(params)

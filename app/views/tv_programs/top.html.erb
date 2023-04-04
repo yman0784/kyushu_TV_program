@@ -3,7 +3,7 @@
 <% @prefecture_programs.each do |t| %>
   <div class="article" >
     <div class="article-overview">
-      <%= link_to tv_program_top_show_path(t.id, t.prefecture_id) do %>
+      <%= link_to prefecture_program_path(t.id, t.prefecture_id) do %>
         <p class="article-title">
           <%= t[:title] %>
         </p>

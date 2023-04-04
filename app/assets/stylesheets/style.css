@@ -188,3 +188,67 @@ h2 {
   height: 100%;
   background-color: #c8d1de;
 }
+
+.comment_post {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  margin: 20px 0;
+  padding: 30px;
+  width: 80%;
+  box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
+  background-color: white;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.btm {
+  text-align: center;
+}
+
+.second-logo:hover{
+	transition: 0.2s;
+	transform: scale(1.5, 1.5);
+	z-index:1;
+}
+
+.container h3 {
+  margin: 0 0 20px;
+  text-align: center;
+  font-weight: normal;
+  font-size: 20px;
+  color: #666;
+}
+
+.comments {
+  padding: 5px;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.comments a {
+  color: #57C3E9;
+}
+
+.comments a:hover {
+  text-decoration: underline;
+}
+
+.comments div {
+  font-size: larger;
+} 
+
+form textarea {
+  width: 100%;
+  margin: 5px 0 15px;
+  padding: 10px;
+  border: 1px solid #D8D8D8;
+  border-radius: 5px;
+  font-family: "游ゴシック", "YuGothic";
+}
