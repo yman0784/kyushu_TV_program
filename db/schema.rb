@@ -20,72 +20,6 @@ ActiveRecord::Schema.define(version: 2023_04_02_171335) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "fukuokas", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "title"
-    t.string "time"
-    t.text "overview"
-    t.text "detail"
-    t.text "performer"
-    t.integer "prefecture_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "kagoshimas", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "title"
-    t.string "time"
-    t.text "overview"
-    t.text "detail"
-    t.text "performer"
-    t.integer "prefecture_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "kumamotos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "title"
-    t.string "time"
-    t.text "overview"
-    t.text "detail"
-    t.text "performer"
-    t.integer "prefecture_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "miyazakis", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "title"
-    t.string "time"
-    t.text "overview"
-    t.text "detail"
-    t.text "performer"
-    t.integer "prefecture_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "nagasakis", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "title"
-    t.string "time"
-    t.text "overview"
-    t.text "detail"
-    t.text "performer"
-    t.integer "prefecture_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "oita", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "title"
-    t.string "time"
-    t.text "overview"
-    t.text "detail"
-    t.text "performer"
-    t.integer "prefecture_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "prefecture_programs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
     t.string "time"
@@ -93,24 +27,6 @@ ActiveRecord::Schema.define(version: 2023_04_02_171335) do
     t.text "detail"
     t.text "performer"
     t.integer "prefecture_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "sagas", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "title"
-    t.string "time"
-    t.text "overview"
-    t.text "detail"
-    t.text "performer"
-    t.integer "prefecture_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "search_actors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "actor", null: false
-    t.integer "prefecture_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
