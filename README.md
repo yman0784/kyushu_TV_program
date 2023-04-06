@@ -1,24 +1,57 @@
-# README
+# テーブル設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## users テーブル
 
-Things you may want to cover:
+| Column             | Type   | Options     |
+| ------------------ | ------ | ----------- |
+| nickname           | string | null: false |
+| email              | string | null: false |
+| encrypted_password | string | null: false |
 
-* Ruby version
+### Association
 
-* System dependencies
+- has_many :comments
 
-* Configuration
+## tv_programs テーブル
 
-* Database creation
+| Column        | Type       | Options                        |
+| ------------- | ---------- | ------------------------------ |
+| title         | string     |                                |
+| time          | string     |                                |
+| overview      | text       |                                |
+| detail        | text       |                                |
+| performer     | text       |                                |
+| prefecture_id | integer    | null: false, foreign_key: true |
 
-* Database initialization
+### Association
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+## prefecture_programs テーブル
 
-* Deployment instructions
+| Column        | Type       | Options                        |
+| ------------- | ---------- | ------------------------------ |
+| title         | string     |                                |
+| time          | string     |                                |
+| overview      | text       |                                |
+| detail        | text       |                                |
+| performer     | text       |                                |
+| prefecture_id | integer    | null: false, foreign_key: true |
+| extract_time  | string     |                                |
 
-* ...
+### Association
+
+- has_many :comments
+
+## comments テーブル
+
+| Column        | Type       | Options                        |
+| ------------- | ---------- | ------------------------------ |
+| text          | text       |                                |
+| user_id       | integer    | null: false, foreign_key: true |
+| prefecture_id | integer    | null: false, foreign_key: true |
+
+
+### Association
+
+- belongs_to :user
+- belongs_to :prefecture_program
