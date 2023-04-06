@@ -1,5 +1,6 @@
 class TvProgram < ApplicationRecord
   require 'mechanize'
+  require 'date'
 
   def self.hours_check(hours)
     if hours == '2'
@@ -49,10 +50,12 @@ class TvProgram < ApplicationRecord
 
   def self.keep(params)
     @tele =[]
+    day = Date.today
     @data.each do |d| 
       if d[:act].include?("#{params[:actor]}")
       @tv = PrefectureProgram.new
-      @tv = PrefectureProgram.create(title: d[:title], time: d[:time], overview: d[:overview], detail: d[:detail], performer: d[:act], prefecture_id: params[:prefecture_id])
+      d[:extract_time] = "#{day.year}-" + d[:time].sub(/～.*/, "")
+      @tv = PrefectureProgram.create(title: d[:title], time: d[:time], overview: d[:overview], detail: d[:detail], performer: d[:act], prefecture_id: params[:prefecture_id], extract_time: d[:extract_time])
       @tv_program= TvProgram.create(title: d[:title], time: d[:time], overview: d[:overview], detail: d[:detail], performer: d[:act], prefecture_id: params[:prefecture_id])
       @tele << @tv_program
       end   

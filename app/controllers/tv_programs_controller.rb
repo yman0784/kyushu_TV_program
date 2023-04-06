@@ -10,7 +10,7 @@ class TvProgramsController < ApplicationController
   end
 
   def top
-    @prefecture_programs = PrefectureProgram.where(prefecture_id: params[:prefecture_id])
+    @prefecture_programs = PrefectureProgram.extract(params)
   end
 
   def find

@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 2023_04_02_171335) do
     t.text "detail"
     t.text "performer"
     t.integer "prefecture_id"
+    t.string "extract_time"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

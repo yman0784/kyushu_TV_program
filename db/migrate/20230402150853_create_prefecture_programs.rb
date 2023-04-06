@@ -7,6 +7,7 @@ class CreatePrefecturePrograms < ActiveRecord::Migration[6.0]
       t.text :detail
       t.text :performer
       t.integer :prefecture_id
+      t.string :extract_time
       t.timestamps
     end
   end
