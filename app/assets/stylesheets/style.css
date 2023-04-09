@@ -175,6 +175,30 @@ h2 {
 
 /* 出演番組 find ここまで */
 
+.top{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+
+.content_explain{
+  margin: 20px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align:center;
+  height: 10vh;
+  width: 80%;
+  font-size: xx-large;
+  color: #010079;
+  text-shadow: 0 0 5px white;
+  border-left: solid 7px #010079;
+  background: -webkit-repeating-linear-gradient(-45deg, #cce7ff, #cce7ff 3px,#e9f4ff 3px, #e9f4ff 7px);
+  background: repeating-linear-gradient(-45deg, #cce7ff, #cce7ff 3px,#e9f4ff 3px, #e9f4ff 7px);
+}
+
 .show {
   width: 100%;
   display: flex;
