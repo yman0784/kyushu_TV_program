@@ -3,7 +3,7 @@ class CreatePrefecturePrograms < ActiveRecord::Migration[6.0]
     create_table :prefecture_programs do |t|
       t.string :title
       t.string :time
-      t.text :overview
+      t.text :overview, uniqueness: true
       t.text :detail
       t.text :performer
       t.integer :prefecture_id

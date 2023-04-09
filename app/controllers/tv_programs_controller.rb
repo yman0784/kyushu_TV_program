@@ -10,7 +10,8 @@ class TvProgramsController < ApplicationController
   end
 
   def top
-    @prefecture_programs = PrefectureProgram.extract(params)
+    @prefecture_programs = PrefectureProgram.extract(params).sort.reverse
+    @prefecture_name = PrefectureProgram.prefecture_name(params)
   end
 
   def find
@@ -22,6 +23,7 @@ class TvProgramsController < ApplicationController
   private
 
   def deny_nil
+    params[:actor].gsub!(/[[:space:]]/, "")
     if params[:actor] == nil
       redirect_to "/"
     end

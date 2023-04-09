@@ -1,28 +1,29 @@
 <%= render "shared/second-header"%>
+<div class="top">
+  <div class="content_explain"><%="#{@finder[:actor]}さんの出演番組"%> </div>
 
-<h1> <%="#{@finder[:actor]}さんの出演番組"%> </h1>
-
-<%if @tvs.present? %>
-  <% @tvs.each do |t|%>
-    <div class="article" >
-      <div class="article-overview">
-        <%= link_to tv_program_path(t.id) do %>
-          <p class="article-title">
-            <%= t[:title] %>
+  <%if @tvs.present? %>
+    <% @tvs.each do |t|%>
+      <div class="article" >
+        <div class="article-overview">
+          <%= link_to tv_program_path(t.id) do %>
+            <p class="article-title">
+              <%= t[:title] %>
+            </p>
+          <% end %>
+          <p class="article-content">
+            放送時間：<%= t[:time] %>
           </p>
-        <% end %>
-        <p class="article-content">
-          放送時間：<%= t[:time] %>
-        </p>
-        <p class="article-content">
-          番組概要：<%= t[:overview] %>
-        <p class="article-content">
-          出演者：<%= t[:performer] %>
-        </p>
+          <p class="article-content">
+            番組概要：<%= t[:overview] %>
+          <p class="article-content">
+            出演者：<%= t[:performer] %>
+          </p>
+        </div>
       </div>
-    </div>
 
-  <% end %> 
-<%else%>
-  <%= "#{@finder[:actor]}さんの出演番組はありません" %>
-<% end %>
+    <% end %> 
+  <%else%>
+    <%= "#{@finder[:actor]}さんの出演番組はありません" %>
+  <% end %>
+</div>

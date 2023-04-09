@@ -1,21 +1,24 @@
 <%= render "shared/second-header"%>
+<div class="top">
+  <div class="content_explain"><%= "#{@prefecture_name}で1週間以内に検索された番組"%></div>
 
-<% @prefecture_programs.each do |t| %>
-  <div class="article" >
-    <div class="article-overview">
-      <%= link_to prefecture_program_path(t.id, t.prefecture_id) do %>
-        <p class="article-title">
-          <%= t[:title] %>
+  <% @prefecture_programs.each do |t| %>
+    <div class="article" >
+      <div class="article-overview">
+        <%= link_to prefecture_program_path(t.id, t.prefecture_id) do %>
+          <p class="article-title">
+            <%= t[:title] %>
+          </p>
+        <% end %>
+        <p class="article-content">
+          放送時間：<%= t[:time] %>
         </p>
-      <% end %>
-      <p class="article-content">
-        放送時間：<%= t[:time] %>
-      </p>
-      <p class="article-content">
-        番組概要：<%= t[:overview] %>
-      <p class="article-content">
-        出演者：<%= t[:performer] %>
-      </p>
+        <p class="article-content">
+          番組概要：<%= t[:overview] %>
+        <p class="article-content">
+          出演者：<%= t[:performer] %>
+        </p>
+      </div>
     </div>
-  </div>
-<% end %>
+  <% end %>
+</div>
