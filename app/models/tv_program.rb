@@ -44,7 +44,6 @@ class TvProgram < ApplicationRecord
         end
         @data << data
       end
-      sleep (1)
     end
   end
 
